@@ -1,0 +1,139 @@
+body{
+  font-family: "Poppins", sans-serif;
+  background:#06070f;
+  color:#fff;
+  margin:0;
+  padding:0;
+}
+
+/* Top Header */
+header{
+  padding:14px 22px;
+  background:linear-gradient(145deg,#0b0f2a,#0a0e24);
+  border-bottom:1px solid rgba(255,255,255,.1);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+header button{
+  padding:8px 14px;
+  border:none;
+  border-radius:10px;
+  background:#2b2f4a;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+  transition:.25s;
+}
+
+header button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 14px rgba(0,0,0,.4);
+}
+
+/* Page Container */
+.details-box{
+  max-width:1100px;
+  margin:36px auto;
+  padding:0 20px;
+}
+
+/* Main Product Card */
+.product-detail-card{
+  display:grid;
+  grid-template-columns:1.1fr 1.3fr;
+  gap:26px;
+  background:linear-gradient(160deg,#111633,#0c1027);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:20px;
+  padding:20px;
+  box-shadow:0 18px 36px rgba(0,0,0,.55);
+}
+
+/* Image */
+.detail-img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  border-radius:14px;
+}
+
+/* Content */
+.detail-content h2{
+  margin:4px 0 6px;
+  font-size:1.6rem;
+}
+
+.detail-badge{
+  display:inline-block;
+  background:#ffb703;
+  padding:6px 10px;
+  border-radius:10px;
+  font-weight:700;
+  font-size:.8rem;
+}
+
+.detail-price{
+  margin:10px 0;
+  color:#ffc861;
+  font-size:1.4rem;
+  font-weight:700;
+}
+
+.detail-category{
+  opacity:.85;
+  margin-bottom:8px;
+}
+
+.detail-desc{
+  opacity:.85;
+  margin:12px 0 16px;
+}
+
+/* Buttons Section */
+.detail-actions{
+  margin-top:10px;
+  display:flex;
+  gap:10px;
+}
+
+.detail-actions button{
+  flex:1;
+  padding:10px 14px;
+  border:none;
+  border-radius:12px;
+  font-weight:700;
+  cursor:pointer;
+  transition:.25s;
+}
+
+/* Add to Cart */
+.detail-actions button:first-child{
+  background:#17c964;
+  color:#000;
+}
+.detail-actions button:first-child:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 18px rgba(23,201,100,.35);
+}
+
+/* Continue Shopping */
+.detail-actions button:last-child{
+  background:#2d335a;
+  color:#fff;
+}
+.detail-actions button:last-child:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 18px rgba(45,51,90,.45);
+}
+
+/* Responsive */
+@media(max-width:820px){
+  .product-detail-card{
+    grid-template-columns:1fr;
+  }
+  .detail-img{
+    height:300px;
+  }
+}

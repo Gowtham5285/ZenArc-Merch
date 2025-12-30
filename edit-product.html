@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Product</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<header class="admin-bar">
+  <h2>✏ Edit Product</h2>
+
+  <div>
+    <span id="userName"></span>
+    <button onclick="window.location.href='admin.html'">⬅ Back</button>
+    <button id="logoutBtn">🚪 Logout</button>
+  </div>
+</header>
+
+<h3 class="sub-title">Update Product Details</h3>
+
+<div class="add-box">
+  <input id="name" type="text" placeholder="Product Name">
+
+  <input id="price" type="number" placeholder="Price (₹)">
+
+  <select id="category">
+    <option value="">Select Category</option>
+    <option value="figure">Figure</option>
+    <option value="hoodie">Hoodie</option>
+    <option value="poster">Poster</option>
+    <option value="accessory">Accessory</option>
+  </select>
+
+  <input id="badge" type="text" placeholder="Badge">
+
+  <input id="img" type="text" placeholder="Image URL">
+
+  <textarea id="description" placeholder="Product Description"></textarea>
+
+  <button id="updateBtn">Update Product</button>
+</div>
+
+<script src="script.js"></script>
+<script src="edit-product.js"></script>
+
+</body>
+</html>

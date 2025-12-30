@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZenArc Merch</title>
+
+  <link rel="stylesheet" href="cart.css" />
+</head>
+
+<body>
+
+<!-- ⭐ NAVBAR ADDED HERE ⭐ -->
+<header class="navbar">
+  <h1 class="logo">⚔️ ZenArc Merch 🎌</h1>
+
+  <div class="nav-right">
+    <button id="homeBtn" class="nav-link">🏠 Home</button>
+
+    <button id="cartBtn">
+      🛒 Cart (<span id="cartCount">0</span>)
+    </button>
+  </div>
+</header>
+<!-- ⭐ END NAVBAR ⭐ -->
+
+
+<div class="cart-container">
+
+  <h2>🛒 Your Shopping Cart</h2>
+
+  <div id="cartList"></div>
+
+  <div class="total-box">
+    <h3>Grand Total: ₹<span id="grandTotal">0</span></h3>
+
+    <button class="checkout-btn"
+      onclick="location.href='checkout.html'">
+      Proceed to Checkout ➜
+    </button>
+  </div>
+
+  <button class="back-btn" onclick="location.href='index.html'">
+    ⬅ Continue Shopping
+  </button>
+</div>
+
+
+<script>
+// -------- NAVBAR BUTTON ACTIONS --------
+document.getElementById("homeBtn").onclick = () =>
+  location.href = "index.html";
+
+document.getElementById("cartBtn").onclick = () =>
+  location.href = "cart.html";
+
+// Load cart count if exists
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+document.getElementById("cartCount").textContent =
+  cart.reduce((s,i)=>s+(i.qty||1),0);
+
+// -------- CART LOGIC (unchanged) --------
+const cartList = document.getElementById("cartList");
+const grandTotal = document.getElementById("grandTotal");
+
+function saveCart(){
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function updateTotal(){
+  let total = 0;
+  cart.forEach(item => total += item.price * item.qty);
+  grandTotal.textContent = total;
+}
+
+function changeQty(name, amount){
+  const item = cart.find(p => p.name === name);
+  if(!item) return;
+
+  item.qty += amount;
+  if(item.qty <= 0){
+    cart = cart.filter(p => p.name !== name);
+  }
+
+  saveCart();
+  renderCart();
+}
+
+function removeItem(name){
+  cart = cart.filter(p => p.name !== name);
+  saveCart();
+  renderCart();
+}
+
+function renderCart(){
+  cartList.innerHTML = "";
+
+  if(cart.length === 0){
+    cartList.innerHTML = `<p class="empty">Your cart is empty 😔</p>`;
+    grandTotal.textContent = 0;
+    return;
+  }
+
+  cart.forEach(item => {
+    const row = document.createElement("div");
+    row.className = "cart-item";
+
+    const itemTotal = item.price * item.qty;
+
+    row.innerHTML = `
+      <img src="${item.img}" />
+
+      <div class="info">
+        <h3>${item.name}</h3>
+        <p>₹${item.price} each</p>
+
+        <div class="qty-box">
+          <button onclick="changeQty('${item.name}', -1)">−</button>
+          <span>${item.qty}</span>
+          <button onclick="changeQty('${item.name}', 1)">+</button>
+        </div>
+
+        <strong>₹${itemTotal}</strong>
+      </div>
+
+      <button class="remove-btn"
+        onclick="removeItem('${item.name}')">
+        ❌
+      </button>
+    `;
+
+    cartList.appendChild(row);
+  });
+
+  updateTotal();
+}
+
+renderCart();
+</script>
+
+</body>
+</html>

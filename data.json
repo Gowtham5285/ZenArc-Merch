@@ -1,0 +1,125 @@
+{
+  "products": [
+    {
+      "id": "2",
+      "name": "One Piece Hoodie",
+      "price": 1200,
+      "category": "hoodie",
+      "badge": "Hot",
+      "img": "https://images-cdn.ubuy.co.in/6352d4518b1c7a4d65430c43-one-piece-hoodie-luffy-zoro-chopper.jpg",
+      "description": ""
+    },
+    {
+      "id": "3",
+      "name": "Demon Slayer Poster",
+      "price": 499,
+      "category": "poster",
+      "badge": "Trending",
+      "img": "https://rukminim2.flixcart.com/image/480/640/xif0q/poster/f/v/m/medium-all-characters-demon-slayer-framed-poster-anime-framed-original-imah2y8em38eawgx.jpeg?q=90"
+    },
+    {
+      "id": "4",
+      "name": "Gojo Keychain",
+      "price": 299,
+      "category": "accessory",
+      "badge": "New",
+      "img": "https://images.meesho.com/images/products/411084027/aatmj_512.webp?width=512"
+    },
+    {
+      "id": "5",
+      "name": "Itachi Uchiha Figure",
+      "price": 1599,
+      "category": "figure",
+      "badge": "Fan Favorite",
+      "img": "https://www.superherotoystore.com/cdn/shop/files/1_4c21e09c-617c-49ff-a9dd-9c50dbfcb6ed_1600x.jpg?v=1746018519"
+    },
+    {
+      "id": "6",
+      "name": "Attack on Titan Hoodie",
+      "price": 1999,
+      "category": "hoodie",
+      "badge": "Limited",
+      "img": "https://i.etsystatic.com/52597500/r/il/965660/6376616893/il_570xN.6376616893_8brc.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Jujutsu Kaisen Poster",
+      "price": 549,
+      "category": "poster",
+      "badge": "Hot",
+      "img": "https://cdn.displate.com/artwork/270x380/2025-10-28/1d1df2670410671484d61d565f1bd5fd_65f42aeb72c1079d50918ebba94fd913.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Dragon Ball Z Keychain",
+      "price": 349,
+      "category": "accessory",
+      "badge": "New",
+      "img": "https://www.merakiimee.com/cdn/shop/files/Merakii_Mee_Dragon_ball_Z_Keychain_with_Strap-8.png?v=1713029351"
+    },
+    {
+      "id": "9",
+      "name": "Luffy Gear 5 Figure",
+      "price": 2499,
+      "category": "figure",
+      "badge": "Premium",
+      "img": "https://onepiece.b-cdn.net/wp-content/uploads/2023/05/19.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Tokyo Revengers Hoodie",
+      "price": 1799,
+      "category": "hoodie",
+      "badge": "Bestseller",
+      "img": "https://images-cdn.ubuy.co.in/6590f6551e6dd200735bdb74-tokyo-revengers-hoodie-unisex-manjiro.jpg"
+    },
+    {
+      "id": "11",
+      "name": "Chainsaw Man Poster",
+      "price": 499,
+      "category": "poster",
+      "badge": "Trending",
+      "img": "https://images-cdn.ubuy.co.in/65205a3049be1a02cc0e94e6-trends-international-chainsaw-man-key.jpg"
+    },
+    {
+      "id": "12",
+      "name": "Nezuko Keychain",
+      "price": 259,
+      "category": "accessory",
+      "badge": "Cute",
+      "img": "https://www.1999.co.jp/itbig102/11024494a.jpg"
+    },
+    {
+      "id": "2a7d",
+      "name": "Sasuke Hoodie",
+      "price": 1200,
+      "category": "hoodie",
+      "badge": "New",
+      "img": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTFTfOMqsVb_Qq6Qd1UcGd8futKKAXQnA9__62kf-8OqGwcyVk27rh78F4B5qKeu8c__y7PCuF29C6dW9aK4pdN3Bs3pm5c9bUacBT_xtHWw4RHs61I2AwP",
+      "description": "this is a hoodie"
+    }
+  ],
+  "users": [
+    {
+      "id": "3ffa",
+      "name": "Gowtham Sai Valluri",
+      "email": "gowthamsaivalluri7569@gmail.com",
+      "password": "MTIzNDU2Nzg=",
+      "role": "user"
+    },
+    {
+      "id": "359a",
+      "name": "ram",
+      "email": "ram@gmail.com",
+      "password": "cmFtMTIzNA==",
+      "role": "admin"
+    },
+    {
+      "id": "d780",
+      "name": "sudheer",
+      "email": "sudheer@gmail.com",
+      "password": "MTIzNDU=",
+      "role": "user"
+    }
+  ]
+}

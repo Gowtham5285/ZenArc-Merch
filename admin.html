@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<header class="admin-bar">
+  <h2>🧑‍💻 Admin Dashboard</h2>
+
+  <div>
+    <span id="userName"></span>
+    <button onclick="window.location.href='index.html'">🏠 Store</button>
+    <button id="logoutBtn">🚪 Logout</button>
+  </div>
+</header>
+
+<h3 class="sub-title">Product Management</h3>
+
+<div class="top-actions">
+  <button onclick="window.location.href='add-product.html'">
+    ➕ Add New Product
+  </button>
+</div>
+
+<div id="adminProducts" class="product-list"></div>
+
+<script src="script.js"></script>
+<script src="admin.js"></script>
+
+</body>
+</html>

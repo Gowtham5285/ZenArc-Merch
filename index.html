@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZenArc Merch</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <h1 class="logo">⚔️ ZenArc Merch 🎌</h1>
+
+  <div class="nav-right">
+    <span id="userBadge" class="user-badge"></span>
+
+    <input id="searchInput" type="text" placeholder="🔍 Search products">
+
+    <select id="categoryFilter">
+      <option value="all">All</option>
+      <option value="figure">Figures</option>
+      <option value="hoodie">Hoodies</option>
+      <option value="poster">Posters</option>
+      <option value="accessory">Accessories</option>
+    </select>
+
+    <button id="favBtn" class="nav-btn">
+      ❤️ Favourites <span id="favCount">0</span>
+    </button>
+
+    <button id="cartBtn" class="nav-btn">
+      🛒 Cart <span id="cartCount">0</span>
+    </button>
+
+    <button id="logoutBtn" class="nav-btn logout">🚪 Logout</button>
+  </div>
+</header>
+
+<section class="hero">
+  <h2>⚡ Discover Next-Gen Anime Merch</h2>
+  <p>Premium Collectibles • Lifestyle Wear • Signature Accessories</p>
+  <button class="cta-btn">Shop the Collection</button>
+</section>
+
+<section class="products">
+  <h2 class="section-title">Trending Anime Merch</h2>
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+<div class="cart-popup" id="cartBox">
+  <h3>🛒 Cart Items</h3>
+  <ul id="cartItems"></ul>
+  <button id="closeCart">Close</button>
+</div>
+
+<footer>
+  <p>© 2025 ZenArc Merch — Built with ❤️ in India 🇮🇳</p>
+</footer>
+
+<script>
+  // ----- USER / GUEST SESSION -----
+  const userBadge = document.getElementById("userBadge");
+  const logoutBtn = document.getElementById("logoutBtn");
+
+  const user  = JSON.parse(localStorage.getItem("user"));
+  const guest = JSON.parse(localStorage.getItem("guest_user"));
+
+  if (user) {
+    userBadge.textContent = `👤 ${user.name || "User"}`;
+  } 
+  else if (guest) {
+    userBadge.textContent = "🟢 Guest User";
+  } 
+  else {
+    // No session? create automatic guest
+    const autoGuest = {
+      id: "guest-" + crypto.randomUUID(),
+      role: "guest"
+    };
+    localStorage.setItem("guest_user", JSON.stringify(autoGuest));
+    userBadge.textContent = "🟢 Guest User";
+  }
+
+  // Logout → clear session and go back to signup
+  logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("user");
+    localStorage.removeItem("guest_user");
+    window.location.href = "signup.html";
+  });
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
